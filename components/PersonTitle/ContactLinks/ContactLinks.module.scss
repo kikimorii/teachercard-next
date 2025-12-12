@@ -1,0 +1,12 @@
+.contactLinks {
+	max-width: 380px;
+	padding: 8px;
+	display: flex;
+	background-color: rgb(255, 255, 255);
+	border-radius: 20px;
+	justify-content: space-around;
+
+	@media (max-width: 400px) {
+		max-width: 250px;
+	}
+}
