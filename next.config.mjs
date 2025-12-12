@@ -7,6 +7,11 @@ const nextConfig = {
 				hostname: 'src.guap.ru',
 				pathname: '/logos/guap/**',
 			},
+			{
+				protocol: 'https',
+				hostname: 'pro.guap.ru',
+				pathname: '/avatars/**',
+			},
 		],
 	},
 };
