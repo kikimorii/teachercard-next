@@ -6,6 +6,7 @@ export const Button = ({
 	children,
 	withIcon,
 	onlyIcon,
+	className,
 }) => {
 	const withIconStyle = {
 		display: 'flex',
@@ -17,11 +18,14 @@ export const Button = ({
 		backgroundColor: '#FFFFFF',
 		borderRadius: '6px',
 		padding: '4px',
+		display: 'none',
+		justifyContent: 'center',
+		alignItems: 'center',
 	};
 
 	return (
 		<button
-			className={styleClasses}
+			className={`${styleClasses} ${className}`}
 			onClick={handleClick}
 			style={withIcon ? withIconStyle : onlyIcon ? onlyIconStyle : {}}
 			type='button'
