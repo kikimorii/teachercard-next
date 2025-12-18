@@ -1,0 +1,45 @@
+.personInfoList {
+	& li {
+		padding-left: 12px;
+		&::marker {
+			font-family: 'bootstrap-icons';
+		}
+
+		&.telegram,
+		&.vk,
+		&.ok,
+		&.max {
+			&::marker {
+				font-family: 'guap-icons';
+			}
+		}
+
+		&.telegram::marker {
+			content: '\e91f';
+		}
+
+		&.vk::marker {
+			content: '\e91a';
+		}
+
+		&.ok::marker {
+			content: '\e91d';
+		}
+
+		&.max::marker {
+			content: '\e925';
+		}
+
+		&.post::marker {
+			content: '\F6FE';
+		}
+
+		&.location::marker {
+			content: '\F3E8';
+		}
+
+		&.mail::marker {
+			content: '\F32F';
+		}
+	}
+}
