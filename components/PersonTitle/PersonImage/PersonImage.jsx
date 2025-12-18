@@ -9,8 +9,8 @@ export const PersonImage = ({ link }) => {
 				className={styles.personImage}
 				src={link}
 				alt={'teacherAvatar'}
-				width={230}
-				height={230}
+				width={228}
+				height={228}
 			/>
 			<Button className={styles.personImageButton} onlyIcon={true}>
 				<QrCodeIcon />
