@@ -1,5 +1,5 @@
 import { ClientProvider } from '@/components/layout/ClienProvider';
-import { ContactLink, PersonTitle, ContactLinks } from '@/components';
+import { PersonInfo, PersonTitle } from '@/components';
 
 export default async function Home(props) {
 	const searchParams = await props.searchParams;
@@ -14,6 +14,7 @@ export default async function Home(props) {
 	return (
 		<ClientProvider data={data}>
 			<PersonTitle />
+			<PersonInfo />
 		</ClientProvider>
 	);
 }
