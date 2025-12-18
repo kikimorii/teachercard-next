@@ -1,5 +1,7 @@
 export * from './Button/Button';
 export * from './QrCode/QrCodeIcon';
+export * from './QrCode/QrCode';
+
 export * from './PersonTitle/PersonTitle';
 export * from './PersonTitle/PersonImage/PersonImage';
 export * from './PersonTitle/ContactLinks/ContactLinks';
