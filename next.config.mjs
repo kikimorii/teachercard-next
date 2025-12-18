@@ -12,6 +12,11 @@ const nextConfig = {
 				hostname: 'pro.guap.ru',
 				pathname: '/avatars/**',
 			},
+			{
+				protocol: 'https',
+				hostname: 'fs.guap.ru',
+				pathname: '/_persons/**',
+			},
 		],
 	},
 };
