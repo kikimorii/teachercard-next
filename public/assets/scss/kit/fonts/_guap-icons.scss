@@ -2,12 +2,12 @@
  * Guap Icons v11.3
 */
 .gi::before,
-[class*=' gi-']::before,
-[class^='gi-']::before {
+[class^='gi-']::before,
+[class*=' gi-']::before {
 	display: inline-block;
-	font-family: guap-icons !important;
+	font-family: 'guap-icons' !important;
 	font-style: normal;
-	font-weight: 400 !important;
+	font-weight: normal !important;
 	font-variant: normal;
 	text-transform: none;
 	line-height: 1;
@@ -16,6 +16,12 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+/*
+ * Attention!
+ * This code is generated automatically.
+ * The changes made may be lost during the next update
+ * Generation: 13.11.2025 16:50:49
+ */
 .gi-logo-vk::before {
 	content: '\e91a';
 }
@@ -38,6 +44,18 @@
 
 .gi-logo-dzen::before {
 	content: '\e923';
+}
+
+.gi-logo-max::before {
+	content: '\e924';
+}
+
+.gi-logo-max1::before {
+	content: '\e925';
+}
+
+.gi-logo-figma::before {
+	content: '\e926';
 }
 
 .gi-bars::before {
