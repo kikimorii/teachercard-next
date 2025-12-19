@@ -1,14 +1,10 @@
 'use client';
 import { PersonShare, PersonInfoList } from '@/components';
-const styles = {
-	backgroundColor: '#FFFFFF',
-	borderRadius: '20px',
-	padding: '24px',
-};
+import styles from './PersonInfo.module.scss';
 
 export const PersonInfo = () => {
 	return (
-		<div style={styles}>
+		<div className={styles.wrapper}>
 			<PersonShare />
 			<PersonInfoList />
 		</div>
