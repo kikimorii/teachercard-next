@@ -19,6 +19,7 @@ const nextConfig = {
 			},
 		],
 	},
+	transpilePackages: ['qr-creator'],
 };
 
 export default nextConfig;

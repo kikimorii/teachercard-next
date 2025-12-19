@@ -1,6 +1,7 @@
 'use client';
 import { useRef, useEffect } from 'react';
 import QrCreator from 'qr-creator';
+import styles from './QrCode.module.scss';
 
 export const QrCode = ({ link = '#', size = 250 }) => {
 	const qrRef = useRef(null);
@@ -23,5 +24,5 @@ export const QrCode = ({ link = '#', size = 250 }) => {
 		}
 	}, [link]);
 
-	return <div ref={qrRef}></div>;
+	return <div className={styles.QrCode} ref={qrRef}></div>;
 };

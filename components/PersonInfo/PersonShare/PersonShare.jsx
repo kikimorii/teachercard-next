@@ -11,14 +11,14 @@ export const PersonShare = () => {
 					handleClick={() => console.log('shareButton was clicked!')}
 					withIcon={true}
 				>
-					<i class='bi bi-share'></i> Поделиться
+					<i className='bi bi-share'></i> Поделиться
 				</Button>
 				<Button
 					styleClasses='btn-text download filled'
 					handleClick={() => console.log('downloadButton was clicked!')}
 					withIcon={true}
 				>
-					<i class='bi bi-download'></i> Скачать
+					<i className='bi bi-download'></i> Скачать
 				</Button>
 			</div>
 		</div>
