@@ -26,15 +26,12 @@ export const ContactLinks = () => {
 	};
 
 	const contactContent = findContent(telephones, emails, url);
-	const contentLength = Object.keys(contactContent).length;
-	const linkWidth = 380 / contentLength;
 
 	return (
 		<div className={styles.contactLinks}>
 			{Object.entries(contactContent).map((element, index) => (
 				<ContactLink
 					key={index}
-					width={linkWidth}
 					value={element[1]}
 					type={
 						element[0] === 'telephone' ? 'tel' : element[0] === 'email' ? 'email' : ''
