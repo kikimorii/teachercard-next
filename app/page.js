@@ -7,9 +7,12 @@ export default async function Home(props) {
 	const searchParams = await props.searchParams;
 	const id = searchParams.id;
 
-	const data = await fetch(`https://kikimorii.github.io/testJson/${id}.json`, {
-		cache: 'no-store',
-	}).then((res) => res.json());
+	const data = await fetch(
+		`https://kikimorii.github.io/testJson/${atob(id)}.json`,
+		{
+			cache: 'no-store',
+		},
+	).then((res) => res.json());
 
 	return (
 		<ClientProvider data={data}>
