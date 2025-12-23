@@ -12,11 +12,7 @@ export const PersonImage = ({ link }) => {
 				width={228}
 				height={228}
 			/>
-			<Button
-				className={styles.personImageButton}
-				onlyIcon={true}
-				handleClick={onClickHandler}
-			>
+			<Button className={styles.personImageButton} onlyIcon={true}>
 				<QrCodeIcon />
 			</Button>
 		</div>
