@@ -1,5 +1,6 @@
 import { ClientProvider } from '@/components/layout/ClienProvider';
-import { PersonInfo, PersonTitle } from '@/components';
+import { PersonInfo } from '@/components/PersonInfo/PersonInfo';
+import { PersonTitle } from '@/components/PersonTitle/PersonTitle';
 import styles from './page.module.scss';
 
 export default async function Home(props) {

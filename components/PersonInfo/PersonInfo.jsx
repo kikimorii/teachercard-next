@@ -1,10 +1,8 @@
 'use client';
-import {
-	PersonShare,
-	PersonInfoList,
-	PersonShareButtons,
-	Button,
-} from '@/components';
+import { PersonShare } from './PersonShare/PersonShare';
+import { PersonInfoList } from './PersonInfoList/PersonInfoList';
+import { PersonShareButtons } from './PersonShare/PersonShareButtons';
+import { Button } from '@/components/Button/Button';
 import styles from './PersonInfo.module.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { switchMode } from '@/app/store/configSlice';

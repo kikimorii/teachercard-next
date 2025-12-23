@@ -1,7 +1,8 @@
 'use client';
 
 import { useSelector } from 'react-redux';
-import { PersonImage, ContactLinks } from '@/components';
+import { PersonImage } from './PersonImage/PersonImage';
+import { ContactLinks } from './ContactLinks/ContactLinks';
 import styles from './PersonTitle.module.scss';
 
 export const PersonTitle = () => {

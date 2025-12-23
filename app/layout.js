@@ -1,6 +1,7 @@
 import '@/public/assets/scss/main.scss';
 import Script from 'next/script';
-import { Header, Footer } from '@/components/layout';
+import { Header } from '@/components/layout/header/header';
+import { Footer } from '@/components/layout/footer/footer';
 
 export default function RootLayout({ children }) {
 	return (

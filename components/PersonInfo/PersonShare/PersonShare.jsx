@@ -1,5 +1,5 @@
-import { Button, QrCode } from '@/components';
-import { PersonShareButtons } from '@/components';
+import { QrCode } from '@/components/QrCode/QrCode';
+import { PersonShareButtons } from './PersonShareButtons';
 import styles from './PersonShare.module.scss';
 
 export const PersonShare = () => {
