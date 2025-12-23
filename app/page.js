@@ -1,5 +1,6 @@
-import { Main } from '@/components/Main';
 import { ClientProvider } from '@/components/layout/ClienProvider';
+import { PersonInfo, PersonTitle } from '@/components';
+import styles from './page.module.scss';
 
 export default async function Home(props) {
 	const searchParams = await props.searchParams;
@@ -11,7 +12,10 @@ export default async function Home(props) {
 
 	return (
 		<ClientProvider data={data}>
-			<Main />
+			<div className={styles.pageWrapper}>
+				<PersonTitle />
+				<PersonInfo />
+			</div>
 		</ClientProvider>
 	);
 }

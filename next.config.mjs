@@ -7,8 +7,19 @@ const nextConfig = {
 				hostname: 'src.guap.ru',
 				pathname: '/logos/guap/**',
 			},
+			{
+				protocol: 'https',
+				hostname: 'pro.guap.ru',
+				pathname: '/avatars/**',
+			},
+			{
+				protocol: 'https',
+				hostname: 'fs.guap.ru',
+				pathname: '/_persons/**',
+			},
 		],
 	},
+	transpilePackages: ['qr-creator'],
 };
 
 export default nextConfig;

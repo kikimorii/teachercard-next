@@ -1,0 +1,29 @@
+.share {
+	&Buttons {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		@media (max-width: 768px) {
+			flex-direction: row;
+			justify-content: space-between;
+			gap: 25px;
+			& > * {
+				flex-grow: 1;
+			}
+		}
+
+		@media (max-width: 350px) {
+			gap: 8px;
+		}
+	}
+	&Wrapper {
+		display: flex;
+		gap: 24px;
+		align-items: end;
+		margin-bottom: 24px;
+
+		@media (max-width: 768px) {
+			display: none;
+		}
+	}
+}

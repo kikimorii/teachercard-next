@@ -1,4 +1,19 @@
 .page {
+	&Wrapper {
+		margin-top: 40px;
+		margin-bottom: 120px;
+		display: flex;
+		gap: 24px;
+		justify-content: center;
+		align-items: center;
+
+		@media (max-width: 768px) {
+			flex-direction: column;
+		}
+	}
+}
+
+/* .page {
 	--background: #fafafa;
 	--foreground: #fff;
 
@@ -91,10 +106,10 @@ a.primary {
 
 a.secondary {
 	border-color: var(--button-secondary-border);
-}
+} */
 
 /* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
+/* @media (hover: hover) and (pointer: fine) {
 	a.primary:hover {
 		background: var(--button-primary-hover);
 		border-color: transparent;
@@ -138,4 +153,4 @@ a.secondary {
 		--button-secondary-hover: #1a1a1a;
 		--button-secondary-border: #1a1a1a;
 	}
-}
+} */

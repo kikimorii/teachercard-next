@@ -133,6 +133,21 @@
 
 @font-face {
 	font-display: block;
+	font-family: 'guap-icons';
+	src: url('https://src.guap.ru/libs/guap-icons/11/fonts/guap-icons.eot?1zm9cz');
+	src:
+		url('https://src.guap.ru/libs/guap-icons/11/fonts/guap-icons.eot?1zm9cz#iefix')
+			format('embedded-opentype'),
+		url('https://src.guap.ru/libs/guap-icons/11/fonts/guap-icons.ttf?1zm9cz')
+			format('truetype'),
+		url('https://src.guap.ru/libs/guap-icons/11/fonts/guap-icons.woff?1zm9cz')
+			format('woff'),
+		url('https://src.guap.ru/libs/guap-icons/11/fonts/guap-icons.svg?1zm9cz#guap-icons')
+			format('svg');
+}
+
+@font-face {
+	font-display: block;
 	font-family: bootstrap-icons;
 	src:
 		url('https://src.guap.ru/libs/bootstrap-icons/1.10.4/fonts/bootstrap-icons.woff2')

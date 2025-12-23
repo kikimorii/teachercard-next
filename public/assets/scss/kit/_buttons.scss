@@ -64,6 +64,13 @@ button {
 						background-color: $blue-600;
 					}
 				}
+				&.download {
+					color: $primary-guap;
+					background-color: $blue-100;
+					&:hover {
+						background-color: $blue-200;
+					}
+				}
 				&.disabled {
 					color: $black-300;
 					background-color: $black-100;
