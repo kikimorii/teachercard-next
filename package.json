@@ -15,7 +15,8 @@
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "react-redux": "^9.2.0",
-    "sass": "^1.94.2"
+    "sass": "^1.94.2",
+    "vcard-creator": "^0.7.2"
   },
   "devDependencies": {
     "eslint": "^9",
