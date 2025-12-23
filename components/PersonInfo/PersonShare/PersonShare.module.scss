@@ -9,5 +9,9 @@
 		gap: 24px;
 		align-items: end;
 		margin-bottom: 24px;
+
+		@media (max-width: 768px) {
+			display: none;
+		}
 	}
 }
