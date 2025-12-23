@@ -1,6 +1,6 @@
 'use client';
 
-import { ContactLink } from '@/components';
+import { ContactLink } from './ContactLink/ContactLink';
 import styles from './ContactLinks.module.scss';
 import { useSelector } from 'react-redux';
 

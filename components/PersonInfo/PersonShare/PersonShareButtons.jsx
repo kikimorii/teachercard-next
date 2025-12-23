@@ -1,4 +1,4 @@
-import { Button } from '@/components';
+import { Button } from '@/components/Button/Button';
 import styles from './PersonShare.module.scss';
 
 export const PersonShareButtons = () => {
