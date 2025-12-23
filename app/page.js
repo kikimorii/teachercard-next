@@ -10,8 +10,6 @@ export default async function Home(props) {
 		cache: 'no-store',
 	}).then((res) => res.json());
 
-	console.log(data);
-
 	return (
 		<ClientProvider data={data}>
 			<div className={styles.pageWrapper}>

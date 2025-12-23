@@ -6,7 +6,9 @@ const configSlice = createSlice({
 		altMode: false,
 	},
 	reducers: {
-		switchMode: (state) => (state.altMode = !state.altMode),
+		switchMode: (state) => {
+			state.altMode = !state.altMode;
+		},
 	},
 });
 
