@@ -1,7 +1,7 @@
 'use client';
 
 export const Button = ({
-	styleClasses,
+	styleClasses = '',
 	handleClick,
 	children,
 	withIcon,
