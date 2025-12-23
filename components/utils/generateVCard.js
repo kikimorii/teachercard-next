@@ -40,3 +40,17 @@ export function generateVCard(json) {
 
 	return vCardContent;
 }
+
+export function handleClickDownload(data) {
+	const vCardContent = generateVCard(data);
+	const blob = new Blob([vCardContent.toString()], { type: 'text/vcard' });
+	const url = URL.createObjectURL(blob);
+
+	const a = document.createElement('a');
+	a.href = url;
+	a.download = 'contact.vcf';
+
+	a.click();
+
+	URL.revokeObjectURL(url);
+}
