@@ -11,29 +11,31 @@ export const PersonImage = ({ link }) => {
 	const dispatch = useDispatch();
 
 	return (
-		<div className={styles.personImageContainer}>
+		<>
 			{altMode ? (
 				<>
 					<QrCode />
 				</>
 			) : (
 				<>
-					<Image
-						className={styles.personImage}
-						src={link}
-						alt={'teacherAvatar'}
-						width={228}
-						height={228}
-					/>
-					<Button
-						className={styles.personImageButton}
-						onlyIcon={true}
-						handleClick={() => dispatch(switchMode())}
-					>
-						<QrCodeIcon />
-					</Button>
+					<div className={styles.personImageContainer}>
+						<Image
+							className={styles.personImage}
+							src={link}
+							alt={'teacherAvatar'}
+							width={228}
+							height={228}
+						/>
+						<Button
+							className={styles.personImageButton}
+							onlyIcon={true}
+							handleClick={() => dispatch(switchMode())}
+						>
+							<QrCodeIcon />
+						</Button>
+					</div>
 				</>
 			)}
-		</div>
+		</>
 	);
 };
