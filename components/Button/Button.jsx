@@ -12,6 +12,7 @@ export const Button = ({
 		display: 'flex',
 		alignItems: 'center',
 		gap: '12px',
+		justifyContent: 'center',
 	};
 
 	const onlyIconStyle = {

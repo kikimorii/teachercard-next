@@ -5,6 +5,11 @@
 		justify-content: center;
 		align-items: center;
 		text-align: center;
+		gap: 16px;
+
+		& > h5 {
+			margin-bottom: 0;
+		}
 
 		@media (max-width: 768px) {
 			max-width: 380px;

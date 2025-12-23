@@ -10,3 +10,4 @@ export * from './PersonTitle/ContactLinks/ContactLink/ContactLink';
 export * from './PersonInfo/PersonInfo';
 export * from './PersonInfo/PersonShare/PersonShare';
 export * from './PersonInfo/PersonInfoList/PersonInfoList';
+export * from './PersonInfo/PersonShare/PersonShareButtons';

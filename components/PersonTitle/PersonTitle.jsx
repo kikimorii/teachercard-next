@@ -6,12 +6,13 @@ import styles from './PersonTitle.module.scss';
 
 export const PersonTitle = () => {
 	const { name, photo } = useSelector((state) => state.data);
+	const { altMode } = useSelector((state) => state.config);
 
 	return (
 		<div className={styles.personTitleWrapper}>
 			<PersonImage link={photo} />
 			<h5>{`${name.lastname} ${name.firstname} ${name.additional}`}</h5>
-			<ContactLinks />
+			{altMode ? <></> : <ContactLinks />}
 		</div>
 	);
 };
