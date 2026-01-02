@@ -1,7 +1,11 @@
 export const DesktopMenu = () => {
 	return (
 		<div className='desktop-menu_wrapper'>
-			<nav className='header-menu_lists' id='desktopMenu'>
+			<nav
+				className='header-menu_lists'
+				id='desktopMenu'
+				style={{ top: '-10000px' }}
+			>
 				<ul
 					className='header-menu_list wrapper container active'
 					id='desktopMenuNode-1'
