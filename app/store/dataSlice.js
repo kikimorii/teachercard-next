@@ -1,0 +1,13 @@
+import { createSlice } from '@reduxjs/toolkit';
+
+export const dataSlice = createSlice({
+	name: 'data',
+	initialState: {},
+	reducers: {
+		setData: (state, action) => action.payload,
+	},
+});
+
+export const { setData } = dataSlice.actions;
+
+export default dataSlice.reducer;

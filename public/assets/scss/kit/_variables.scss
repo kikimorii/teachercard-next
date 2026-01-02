@@ -1,0 +1,166 @@
+// Цветовая палитра
+/*
+    Фирстиль ГУАПа крутится вокруг трёх цветов: Циан, синий и розовый.
+    Соответственно вместо они составляют тройку главных цветов на всём сайте, поэтому все переменные крутятся вокруг них
+    + черный и белый, без которых никуда.
+*/
+
+// black (dark):
+$black-700: #222222;
+$black-600: #3d3d3d;
+$black-500: #7a7a7a;
+$black-400: #a7a7a7;
+$black-300: #dedede;
+$black-200: #ebebeb;
+$black-100: #f6f6f6;
+$black-main: $black-700;
+
+// white (light):
+$white-main: #ffffff;
+
+// cyan
+$cyan-800: #00182e;
+$cyan-700: #002b50;
+$cyan-600: #1f4e78;
+$cyan-500: #6686a3;
+$cyan-400: #99afc2;
+$cyan-300: #d9e1e8;
+$cyan-200: #e8edf1;
+$cyan-100: #f2f5f7;
+$cyan-main: #003666;
+
+// blue
+$blue-800: #00427d;
+$blue-700: #004e93;
+$blue-600: #1f6eb4;
+$blue-500: #669ccc;
+$blue-400: #99bddd;
+$blue-300: #d9e6f2;
+$blue-200: #e8f0f7;
+$blue-100: #f2f7fb;
+$blue-main: #005aaa;
+
+// pink
+$pink-800: #890f3c;
+$pink-700: #d00852;
+$pink-600: #ea4481;
+$pink-500: #f180a9;
+$pink-400: #f5aac6;
+$pink-300: #fbdfea;
+$pink-200: #fdecf2;
+$pink-100: #fef4f8;
+$pink-main: #e72b70;
+
+// main:
+$primary-guap: $blue-main;
+$primary-guap-dark: $cyan-main;
+$secondary-guap: #e72b70;
+$secondary-guap-dark: #890f3c;
+$news-shadow: #d6e5f1;
+$bg-light: #f0f6fb;
+$bg-pubs-contant: #f9f9f9;
+$bg-block-solid: #f5f5f8;
+
+// Отступы
+/*
+    system paddings (система внутренних отступов) создана для упрощения наложения стиля padding,
+    поскольку они должны быть систематично одинаковы везде и не требовать длительных разбирательств для изменений.
+*/
+$sp-1x: 4px;
+$sp-2x: $sp-1x * 2;
+$sp-3x: $sp-1x * 3;
+$sp-4x: $sp-1x * 4;
+$sp-5x: $sp-1x * 5;
+$sp-6x: $sp-1x * 6;
+$sp-7x: $sp-1x * 7;
+$sp-8x: $sp-1x * 8;
+$sp-9x: $sp-1x * 9;
+$sp-10x: $sp-1x * 10;
+
+// Границы/Радиусы
+$rad-1x: 4px;
+$rad-2x: $rad-1x * 1.5;
+$rad-3x: $rad-1x * 2;
+$rad-4x: $rad-1x * 3;
+$rad-5x: $rad-1x * 4;
+$rad-6x: $rad-1x * 5;
+
+// Градиенты границы
+$gradient_it-start: #2e2783;
+$gradient_it-end: #00b7ec;
+
+$gradient_block_light-start: #dcf4ff;
+$gradient_block_light-end: #c5deff;
+
+$gradient_block_dark-start: $gradient_it-start 15%;
+$gradient_block_dark-end: #27caf8;
+
+$gradient_primary-start: $primary-guap;
+$gradient_primary-end: $primary-guap-dark;
+
+$gradient_secondary-start: $secondary-guap;
+$gradient_secondary-dark: $secondary-guap-dark;
+
+$gradient_line-start: #e40046;
+$gradient_line-center: #7f35b2;
+$gradient_line-end: $blue-main;
+
+// Градиенты GUAP
+// Наплавления градиента
+$direction-90: 90deg;
+$direction-135: 135deg;
+$direction-180: 180deg;
+
+// Градиенты
+$gradient_it: linear-gradient(
+	$direction-90,
+	$gradient_it-start,
+	$gradient_it-end
+);
+$gradient_block_light: linear-gradient(
+	$direction-135,
+	$gradient_block_light-start,
+	$gradient_block_light-end
+);
+$gradient_block_dark: linear-gradient(
+	$direction-135,
+	$gradient_block_dark-start,
+	$gradient_block_dark-end
+);
+$gradient_primary: linear-gradient(
+	$direction-180,
+	$gradient_primary-start,
+	$gradient_primary-end
+);
+$gradient_secondary: linear-gradient(
+	$direction-180,
+	$gradient_secondary-start,
+	$gradient_secondary-dark
+);
+$gradient_line-90: linear-gradient(
+	$direction-90,
+	$gradient_line-start,
+	$gradient_line-center,
+	$gradient_line-end
+);
+$gradient_line-180: linear-gradient(
+	$direction-180,
+	$gradient_line-start,
+	$gradient_line-center,
+	$gradient_line-end
+);
+
+// Sizes
+$button-min-size: 48px;
+$social-link-size: 42px;
+
+$header-size: 60px;
+$header-mobile-size: 50px;
+
+// breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+@import 'typography';

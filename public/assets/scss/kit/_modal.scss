@@ -1,0 +1,48 @@
+.modal {
+	background-color: #ffffff;
+	border-radius: 12px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 15px;
+	min-width: 350px;
+	margin-top: -200px;
+
+	@media (max-width: 576px) {
+		min-width: 300;
+		max-width: 350px;
+	}
+	&_background {
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.8);
+		z-index: 4;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&_alert {
+		color: #005aaa;
+		font-size: 16px;
+	}
+	&-title {
+		margin-bottom: 0;
+	}
+	&-button_link {
+		width: 100%;
+		text-align: left;
+		border-radius: 16px;
+		background-color: #c5deff;
+		color: #6686a3;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	&-share_buttons * {
+		width: 30px;
+		height: 30px;
+		text-decoration: none;
+	}
+}

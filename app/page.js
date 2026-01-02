@@ -1,66 +1,79 @@
-import Image from 'next/image';
-import styles from './page.module.css';
+import { ClientProvider } from '@/components/layout/ClienProvider';
+import { PersonInfo } from '@/components/PersonInfo/PersonInfo';
+import { PersonTitle } from '@/components/PersonTitle/PersonTitle';
+import styles from './page.module.scss';
 
-export default function Home() {
-	return (
-		<div className={styles.page}>
-			<main className={styles.main}>
-				<Image
-					className={styles.logo}
-					src='/next.svg'
-					alt='Next.js logo'
-					width={100}
-					height={20}
-					priority
-				/>
-				<div className={styles.intro}>
-					<h1>To get started, edit the page.js file.</h1>
+export default async function Home(props) {
+	const searchParams = await props.searchParams;
+	const id = searchParams.id;
+
+	if (!id || id.trim() === '') {
+		return (
+			<div className={styles.pageWrapper}>
+				<div className={styles.error}>
+					<h2>Не указан ID</h2>
+					<p>Пожалуйста, укажите идентификатор пользователя в параметрах запроса</p>
+				</div>
+			</div>
+		);
+	}
+
+	try {
+		const response = await fetch(
+			`https://kikimorii.github.io/testJson/${atob(id)}.json`,
+			{
+				cache: 'no-store',
+			},
+		);
+
+		if (!response.ok) {
+			if (response.status === 404) {
+				return (
+					<div className={styles.pageWrapper}>
+						<div className={styles.error}>
+							<h2>Пользователь не найден</h2>
+							<p>Пользователь с ID "{id}" не существует</p>
+						</div>
+					</div>
+				);
+			}
+
+			throw new Error(`Ошибка сервера: ${response.status}`);
+		}
+
+		const data = await response.json();
+
+		if (!data || typeof data !== 'object') {
+			throw new Error('Некорректный формат данных');
+		}
+
+		if (!data.name && !data.firstName && !data.lastName) {
+			console.warn('Данные пользователя могут быть неполными');
+		}
+
+		return (
+			<ClientProvider data={data}>
+				<div className={styles.pageWrapper}>
+					<PersonTitle />
+					<PersonInfo />
+				</div>
+			</ClientProvider>
+		);
+	} catch (error) {
+		console.error('Ошибка загрузки данных:', error);
+
+		return (
+			<div className={styles.pageWrapper}>
+				<div className={styles.error}>
+					<h2>Ошибка загрузки данных</h2>
 					<p>
-						Looking for a starting point or more instructions? Head over to{' '}
-						<a
-							href='https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
-							target='_blank'
-							rel='noopener noreferrer'
-						>
-							Templates
-						</a>{' '}
-						or the{' '}
-						<a
-							href='https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
-							target='_blank'
-							rel='noopener noreferrer'
-						>
-							Learning
-						</a>{' '}
-						center.
+						{error.message.includes('Failed to fetch')
+							? 'Не удалось подключиться к серверу'
+							: error.message}
 					</p>
+					<p>ID: {id}</p>
 				</div>
-				<div className={styles.ctas}>
-					<a
-						className={styles.primary}
-						href='https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app'
-						target='_blank'
-						rel='noopener noreferrer'
-					>
-						<Image
-							className={styles.logo}
-							src='/vercel.svg'
-							alt='Vercel logomark'
-							width={16}
-							height={16}
-						/>
-						Deploy Now
-					</a>
-					<a
-						className={styles.secondary}
-						href='https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app'
-						target='_blank'
-						rel='noopener noreferrer'
-					>
-						Documentation
-					</a>
-				</div>
-			</main>
-		</div>
-	);
+			</div>
+		);
+	}
 }
