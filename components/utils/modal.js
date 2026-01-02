@@ -1,5 +1,6 @@
 export function handleClickShare() {
 	const modal = document.querySelector('#modalWindow');
+	const body = document.querySelector('#body');
 
 	const copyBtn = document.querySelector('#copyBtn');
 	const copyAlert = document.querySelector('#copyAlert');
@@ -22,6 +23,7 @@ export function handleClickShare() {
 	shareTGButton.href = `https://t.me/share/url?url=${window.location}`;
 
 	modal.classList.toggle('d-none');
+	body.classList.add('lock');
 
 	if (!modal.classList.contains('d-none')) {
 		function handleModalClose(e) {
@@ -32,6 +34,7 @@ export function handleClickShare() {
 
 		function closeModal() {
 			modal.classList.add('d-none');
+			body.classList.remove('lock');
 
 			modal.removeEventListener('click', handleModalClose);
 			copyBtn.removeEventListener('click', handleCopyClick);

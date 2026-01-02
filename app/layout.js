@@ -7,7 +7,7 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang='ru'>
 			<title>GUAP LAYOUT</title>
-			<body>
+			<body id='body'>
 				<div className='modal_background d-none' id='modalWindow'>
 					<div className='modal'>
 						<p className='modal-title'>Поделиться визиткой</p>
