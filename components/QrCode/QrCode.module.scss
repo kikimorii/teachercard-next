@@ -1,5 +1,6 @@
 .QrCode {
 	max-width: 300px;
+	min-width: 250px;
 	& canvas {
 		width: 100%;
 	}
