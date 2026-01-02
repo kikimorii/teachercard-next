@@ -7,7 +7,6 @@
 	align-items: center;
 	gap: 15px;
 	min-width: 350px;
-	max-width: 400px;
 	margin-top: -200px;
 
 	@media (max-width: 576px) {
@@ -40,6 +39,7 @@
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
+		max-width: 400px;
 	}
 	&-share_buttons * {
 		width: 30px;
