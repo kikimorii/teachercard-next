@@ -14,7 +14,7 @@ export const PersonImage = ({ link }) => {
 		<>
 			{altMode ? (
 				<>
-					<QrCode />
+					<QrCode size={275} />
 				</>
 			) : (
 				<>

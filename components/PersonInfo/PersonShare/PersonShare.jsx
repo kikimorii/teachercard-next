@@ -5,7 +5,7 @@ import styles from './PersonShare.module.scss';
 export const PersonShare = () => {
 	return (
 		<div className={styles.shareWrapper}>
-			<QrCode link='#' size={235} />
+			<QrCode link='#' size={300} />
 			<PersonShareButtons />
 		</div>
 	);
