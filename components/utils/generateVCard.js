@@ -14,11 +14,17 @@ export function generateVCard(json) {
 	const firstname = json.name.firstname;
 	const additional = json.name.additional;
 
-	vCardContent
-		.addName(lastname, firstname, additional)
-		.addCompany(json.organization)
-		.addJobtitle(json.title);
-	// .addURL(json.url)
+	vCardContent.addName(lastname, firstname, additional);
+
+	if (json.organization) {
+		vCardContent.addCompany(json.organization);
+	}
+	if (json.title) {
+		vCardContent.addJobtitle(json.title);
+	}
+	if (json.url) {
+		vCardContent.addURL(json.url);
+	}
 
 	json.telephones.forEach((phone) => {
 		vCardContent.addPhoneNumber(phone.number, 'type=' + phone.type);
@@ -37,6 +43,8 @@ export function generateVCard(json) {
 			);
 		}
 	});
+
+	console.log(vCardContent.toString());
 
 	return vCardContent;
 }

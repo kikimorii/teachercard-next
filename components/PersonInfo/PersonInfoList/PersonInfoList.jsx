@@ -26,8 +26,8 @@ export const PersonInfoList = () => {
 
 	return (
 		<ul className={styles.personInfoList}>
-			<li className={styles.post}>{capitalizeFirstLetter(title)}</li>
-			<li className={styles.location}>{location}</li>
+			{title && <li className={styles.post}>{capitalizeFirstLetter(title)}</li>}
+			{location && <li className={styles.location}>{location}</li>}
 			{socials.map((element, index) => (
 				<li key={index} className={styles[element.type.toLowerCase()]}>
 					<a href={getHref(element)}>
