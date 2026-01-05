@@ -11,8 +11,10 @@ export const PersonTitle = () => {
 
 	return (
 		<div className={styles.personTitleWrapper}>
-			<PersonImage link={photo} />
-			<h5>{`${name.lastname} ${name.firstname} ${name.additional}`}</h5>
+			<PersonImage
+				link={photo ? photo : 'https://pro.guap.ru/images/no_image.jpg'}
+			/>
+			<h5>{`${name.lastname} ${name.firstname} ${name.additional ? name.additional : ''}`}</h5>
 			{altMode ? <></> : <ContactLinks />}
 		</div>
 	);
